@@ -12,8 +12,8 @@ with open('parameters.yml', 'r') as input:
     try:
         p = yaml.safe_load(input)
         # Make sure it is reading ok
-        print("user: %s" % p["user"])
-        print("password: %s" % p["password"])
+        # print("user: %s" % p["user"])
+        # print("password: %s" % p["password"])
     except yaml.YAMLError as error:
         print( error )
         exit(1)
@@ -74,5 +74,5 @@ with codecs.open(md_file_name, "w", "utf-8") as f:
     f.write("Date: %s\n" % now.strftime("%m/%d/%Y"))
     f.write("<br /><br />\n")
     f.write("Note: This listing will be updated regularly.\n")
-    f.write("<br /><br />\n")
+    f.write("<br /><br />\n\n")
     f.write(table_str)
